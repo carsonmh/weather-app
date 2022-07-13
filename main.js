@@ -1,4 +1,5 @@
-const apiKey = "e973ceaeddf4eb27f00fb78c27a42718"
+import apiKey from './private';
+
 const form = document.querySelector('#location-form');
 
 form.addEventListener('submit', function (event) {
