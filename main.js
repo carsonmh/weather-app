@@ -17,14 +17,18 @@ function clearResponseField (){
 
 function showWeather(data) {
     clearResponseField();
-    var temp = kelvinToFahrenheit(data.main.temp)
+    var temp = data.main.temp;
     var location = data.name;
+    var weather = data.weather[0].main
+    var icon = data.weather[0].icon;
+    var weatherImage = `http://openweathermap.org/img/wn/${icon}@2x.png` 
 
     const element = `
     <div id="response">
         <div id="response-text"> 
             <h1 id="location-header">${location}</h1>
             <h3 id="weather-temp">${temp}</h3>
+            <img src=${weatherImage}>
         </div>
     </div>
     `;
@@ -39,7 +43,7 @@ function showError (){
 function retrieveData() {
     const inputVal = form.elements['location-input'].value;
     form.reset();
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${inputVal}&appid=${apiKey}&units=imperial`
     fetch(url)
     .then(response => response.json())
     .then(data => {
