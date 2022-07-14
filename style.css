@@ -1,82 +1,118 @@
 :root {
-    --blue: rgb(14, 54, 128);
+  --blue: rgb(14, 54, 128);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    outline: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+}
+
+html {
+  height: 100%;
 }
 
 body {
-    background: var(--blue);
-    display: flex;
-    justify-content: center;
-    flex-flow: column;
-    align-items: center;
+  background: var(--blue);
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
 }
 
 #header-text {
-    padding: 20px;
-    text-align: center;
-    color: white;
-    font-size: 3em;
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-size: 3em;
 }
 
 #header {
-    /* background-color: rgba(0, 0, 0, .5); */
-    width: 100%;
+  /* background-color: rgba(0, 0, 0, .5); */
+  width: 100%;
 }
 
 #form {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#country {
+  text-align: center;
+  border-radius: 10px;
+  background: orange;
+  margin-left: auto;
+  margin-right: 0;
+  width: 2em;
 }
 
 #response {
-    color: white;
-    background: black;
-    padding: 20px;
-    text-align: center;
-    border-radius: 25px;
+  width: 100%;
+  color: white;
+  padding: 0.5em;
+  background: black;
+  text-align: center;
+  border-radius: 25px;
+  width: 13em;
+  /* height: 15em; */
 }
 
 #response-text {
-    padding: 10px;
+  padding: 10px;
 }
 
 #location-header {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 input[type="text"] {
-    border: none;
-    border-bottom: 1px solid white;
-    background: var(--blue);
-    color: white;
-    font-size: 1.7em;
-}:focus {
-    background: var(--blue);
-    border: black;
-    outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  background: var(--blue);
+  color: white;
+  font-size: 1.7em;
+}
+:focus {
+  background: var(--blue);
+  border: black;
+  outline: none;
 }
 
 p {
-    color: white;
-    font-size: 1em;
+  color: white;
+  font-size: 1em;
 }
 
 input[type="submit"] {
-    border-radius: 5px;
-    border: 0;
-    width: 5em;
-    height: 2.5em;
-    background: rgb(167, 211, 226);
-    margin-left: 1em;
+  border-radius: 5px;
+  border: 0;
+  width: 5em;
+  height: 2.5em;
+  background: rgb(167, 211, 226);
+  margin-left: 1em;
 }
 
 input[type="submit"]:hover {
-    background: rgb(167, 211, 226, .9);
+  background: rgb(167, 211, 226, 0.9);
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+footer p {
+  padding: 2em;
+  opacity: 0.6;
+}
+
+hr {
+  width: 80%;
+  color: grey;
+  opacity: 0.6;
+  margin: auto;
 }

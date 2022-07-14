@@ -21,14 +21,20 @@ function showWeather(data) {
     var location = data.name;
     var weather = data.weather[0].main
     var icon = data.weather[0].icon;
+    var country = data.sys.country ? data.sys.country : "";
     var weatherImage = `http://openweathermap.org/img/wn/${icon}@2x.png` 
+    console.log(data);
 
     const element = `
     <div id="response">
         <div id="response-text"> 
+            <div id="country">
+                <p>${country}</p>
+            </div>
             <h1 id="location-header">${location}</h1>
-            <h3 id="weather-temp">${temp}</h3>
+            <h3 id="weather-temp">${temp}°F</h3>
             <img src=${weatherImage}>
+            <h2>${weather}</h2>
         </div>
     </div>
     `;
