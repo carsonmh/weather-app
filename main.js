@@ -1,4 +1,4 @@
-import apiKey from './private';
+const apiKey = "e973ceaeddf4eb27f00fb78c27a42718";
 
 const form = document.querySelector('#location-form');
 
@@ -17,7 +17,7 @@ function clearResponseField (){
 
 function showWeather(data) {
     clearResponseField();
-    temp = kelvinToFahrenheit(data.main.temp)
+    var temp = kelvinToFahrenheit(data.main.temp)
     var location = data.name;
 
     const element = `
